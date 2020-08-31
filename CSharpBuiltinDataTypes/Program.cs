@@ -9,7 +9,7 @@ namespace CSharpBuiltinDataTypes
             /********** Boolean Data Type **********/
             Console . WriteLine ( "********** Boolean Data Type **********" );
 
-            // bool .NET Type, Default, Minimum and Maximum Value
+            // bool .NET Type, Byte, Bit, Default, Minimum and Maximum Value
             bool boolDefaultValue = default;
             int boolByte          = sizeof(bool);
             bool boolMaxValue     = true;
@@ -25,7 +25,7 @@ namespace CSharpBuiltinDataTypes
             /********** Integral Data Types **********/
             Console . WriteLine ( "********** Integral Data Types **********" );
 
-            // sbyte .NET Type, Default, Minimum and Maximum Value
+            // sbyte .NET Type, Byte, Bit, Default, Minimum and Maximum Value
             sbyte sByteDefaultValue = default;
             sbyte sByteByte         = sizeof(sbyte);
             sbyte sByteMaxValue     = sbyte.MaxValue;
@@ -36,7 +36,7 @@ namespace CSharpBuiltinDataTypes
                                   $"sbyte Maximum Value: {sByteMaxValue}\n" +
                                   $"sbyte Minimum Value: {sByteMinValue}\n" );
 
-            // byte .NET Type, Default, Minimum and Maximum Value
+            // byte .NET Type, Byte, Bit, Default, Minimum and Maximum Value
             byte byteDefaultValue = default;
             byte byteByte         = sizeof(byte);
             byte byteMaxValue     = byte.MaxValue;
@@ -47,7 +47,7 @@ namespace CSharpBuiltinDataTypes
                                   $"byte Maximum Value: {byteMaxValue}\n" +
                                   $"byte Minimum Value: {byteMinValue}\n" );
 
-            // char .NET Type, Default, Minimum and Maximum Value
+            // char .NET Type, Byte, Bit, Default, Minimum and Maximum Value
             char charDefaultValue = default;
             int charByte          = sizeof(char);
             char charMaxValue     = char.MaxValue;
@@ -58,7 +58,7 @@ namespace CSharpBuiltinDataTypes
                                   $"char Maximum Value: {charMaxValue}\n" +
                                   $"char Minimum Value: {charMinValue}\n" );
 
-            // short .NET Type, Default, Minimum and Maximum Value
+            // short .NET Type, Byte, Bit, Default, Minimum and Maximum Value
             short shortDefaultValue = default;
             short shortByte         = sizeof(short);
             short shortMaxValue     = short.MaxValue;
@@ -69,7 +69,7 @@ namespace CSharpBuiltinDataTypes
                                   $"short Maximum Value: {shortMaxValue}\n" +
                                   $"short Minimum Value: {shortMinValue}\n" );
 
-            // ushort .NET Type, Default, Minimum and Maximum Value
+            // ushort .NET Type, Byte, Bit, Default, Minimum and Maximum Value
             ushort uShortDefaultValue = default;
             ushort uShortByte         = sizeof(ushort);
             ushort uShortMaxValue     = ushort.MaxValue;
@@ -80,7 +80,7 @@ namespace CSharpBuiltinDataTypes
                                   $"uShort Maximum Value: {uShortMaxValue}\n" +
                                   $"uShort Minimum Value: {uShortMinValue}\n" );
 
-            // int .NET Type, Default, Minimum and Maximum Value
+            // int .NET Type, Byte, Bit, Default, Minimum and Maximum Value
             int intDefaultValue = default;
             int intByte         = sizeof(int);
             int intMaxValue     = int.MaxValue;
@@ -91,7 +91,7 @@ namespace CSharpBuiltinDataTypes
                                   $"int Maximum Value: {intMaxValue}\n" +
                                   $"int Minimum Value: {intMinValue}\n" );
 
-            // uint .NET Type, Default, Minimum and Maximum Value
+            // uint .NET Type, Byte, Bit, Default, Minimum and Maximum Value
             uint uIntDefaultValue = default;
             uint uIntByte         = sizeof(uint);
             uint uIntMaxValue     = uint.MaxValue;
@@ -102,7 +102,7 @@ namespace CSharpBuiltinDataTypes
                                   $"uint Maximum Value: {uIntMaxValue}\n" +
                                   $"uint Minimum Value: {uIntMinValue}\n" );
 
-            // long .NET Type, Default, Minimum and Maximum Value
+            // long .NET Type, Byte, Bit, Default, Minimum and Maximum Value
             long longDefaultValue = default;
             long longByte         = sizeof(long);
             long longMaxValue     = long.MaxValue;
@@ -113,7 +113,7 @@ namespace CSharpBuiltinDataTypes
                                   $"long Maximum Value: {longMaxValue}\n" +
                                   $"long Minimum Value: {longMinValue}\n" );
 
-            // ulong .NET Type, Default, Minimum and Maximum Value
+            // ulong .NET Type, Byte, Bit, Default, Minimum and Maximum Value
             ulong uLongDefaultValue = default;
             ulong uLongByte         = sizeof(ulong);
             ulong uLongMaxValue     = ulong.MaxValue;
@@ -129,7 +129,7 @@ namespace CSharpBuiltinDataTypes
             /********** Floating Data Types **********/
             Console . WriteLine ( "********** Floating Data Types **********" );
 
-            // float .NET Type, Default, Minimum and Maximum Value
+            // float .NET Type, Byte, Bit, Default, Minimum and Maximum Value
             float floatDefaultValue = default;
             float floatByte         = sizeof(float);
             float floatMaxValue     = float.MaxValue;
@@ -140,7 +140,7 @@ namespace CSharpBuiltinDataTypes
                                   $"float Maximum Value: {floatMaxValue}\n" +
                                   $"float Minimum Value: {floatMinValue}\n" );
 
-            // double .NET Type, Default, Minimum and Maximum Value
+            // double .NET Type, Byte, Bit, Default, Minimum and Maximum Value
             double doubleDefaultValue = default;
             double doubleByte         = sizeof(double);
             double doubleMaxValue     = double.MaxValue;
@@ -156,7 +156,7 @@ namespace CSharpBuiltinDataTypes
             /********** Decimal Data Type **********/
             Console . WriteLine ( "********** Decimal Data Type **********" );
 
-            // decimal .NET Type, Default, Minimum and Maximum Value
+            // decimal .NET Type, Byte, Bit, Default, Minimum and Maximum Value
             decimal decimalDefaultValue = default;
             decimal decimalByte         = sizeof(decimal);
             decimal decimalMaxValue     = decimal.MaxValue;
@@ -172,7 +172,7 @@ namespace CSharpBuiltinDataTypes
             /********** String Data Type **********/
             Console . WriteLine ( "********** String Data Type **********" );
 
-            // string .NET Type, Default, Minimum and Maximum Value
+            // string .NET Type, Byte, Bit, Default, Minimum and Maximum Value
             string stringDefaultValue = default;
             int stringLength          = stringDefaultValue.Length;
             // Default Value of string is null, It Throws a RunTime Error, Not
