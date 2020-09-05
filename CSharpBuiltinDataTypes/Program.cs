@@ -127,7 +127,6 @@ namespace CSharpBuiltinDataTypes
                                   $"ulong Maximum Value: {uLongMaxValue}\n" +
                                   $"ulong Minimum Value: {uLongMinValue}\n" );
 
-
             /********** Floating Data Types **********/
             Console . WriteLine ( "********** Floating Data Types **********" );
 
@@ -152,7 +151,6 @@ namespace CSharpBuiltinDataTypes
                                   $"double Byte: {doubleByte}, Bit: {doubleByte * 8}\n" +
                                   $"double Maximum Value: {doubleMaxValue}\n" +
                                   $"double Minimum Value: {doubleMinValue}\n" );
-
 
             /********** Decimal Data Type **********/
             Console . WriteLine ( "********** Decimal Data Type **********" );
