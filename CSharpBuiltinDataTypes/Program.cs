@@ -9,6 +9,7 @@ namespace CSharpBuiltinDataTypes
             /*>>>>>>>>>> Value Types <<<<<<<<<<*/
             Console . WriteLine ( ">>>>>>>>>>Built-in Value Types<<<<<<<<<<\n" );
 
+
             /********** Boolean Data Type **********/
             Console . WriteLine ( "********** Boolean Data Type **********" );
 
@@ -22,7 +23,6 @@ namespace CSharpBuiltinDataTypes
                                   $"bool Byte: {boolByte}, Bit: {boolByte * 8}\n" +
                                   $"bool Maximum Value: {boolMaxValue}\n" +
                                   $"bool Minimum Value: {boolMinValue}\n" );
-
 
 
             /********** Integral Data Types **********/
@@ -127,6 +127,7 @@ namespace CSharpBuiltinDataTypes
                                   $"ulong Maximum Value: {uLongMaxValue}\n" +
                                   $"ulong Minimum Value: {uLongMinValue}\n" );
 
+
             /********** Floating Data Types **********/
             Console . WriteLine ( "********** Floating Data Types **********" );
 
@@ -152,6 +153,7 @@ namespace CSharpBuiltinDataTypes
                                   $"double Maximum Value: {doubleMaxValue}\n" +
                                   $"double Minimum Value: {doubleMinValue}\n" );
 
+
             /********** Decimal Data Type **********/
             Console . WriteLine ( "********** Decimal Data Type **********" );
 
@@ -171,6 +173,7 @@ namespace CSharpBuiltinDataTypes
             /*>>>>>>>>>> Reference Types <<<<<<<<<<*/
             Console . WriteLine ( ">>>>>>>>>>Built-in Reference Types<<<<<<<<<<\n" );
 
+
             /********** String, Object and Dynamic Data Types **********/
             Console . WriteLine ( "********** String, Object and Dynamic Data Types **********" );
 
@@ -185,11 +188,11 @@ namespace CSharpBuiltinDataTypes
                                   $"object Default Value : {objectDefaultValue}\n" +
                                   $"dynamic Default Value: {dynamicDefaultValue}\n\n" );
 
+
             string stringGreeting   = "Welcome ";
             stringGreeting += "to C#!";
             object objectGreeting   = "Welcome to C#!";
             dynamic dynamicGreeting = "Welcome to C#!";
-
             // object needs typecasting while working with strings
             if ( stringGreeting == ( string ) objectGreeting )
             {
