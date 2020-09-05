@@ -6,12 +6,15 @@ namespace CSharpBuiltinDataTypes
     {
         static void Main ( string [ ] args )
         {
+            /*>>>>>>>>>> Value Types <<<<<<<<<<*/
+            Console . WriteLine ( ">>>>>>>>>>Built-in Value Types<<<<<<<<<<\n" );
+
             /********** Boolean Data Type **********/
             Console . WriteLine ( "********** Boolean Data Type **********" );
 
             // bool .NET Type, Byte, Bit, Default, Minimum and Maximum Value
             bool boolDefaultValue = default;
-            int boolByte          = sizeof(bool);
+            int  boolByte         = sizeof(bool);
             bool boolMaxValue     = true;
             bool boolMinValue     = false;
             Console . WriteLine ( $"bool Default Value: {boolDefaultValue}\n" +
@@ -49,7 +52,7 @@ namespace CSharpBuiltinDataTypes
 
             // char .NET Type, Byte, Bit, Default, Minimum and Maximum Value
             char charDefaultValue = default;
-            int charByte          = sizeof(char);
+            int  charByte         = sizeof(char);
             char charMaxValue     = char.MaxValue;
             char charMinValue     = char.MinValue;
             Console . WriteLine ( $"char Default Value: {charDefaultValue}\n" +
@@ -165,24 +168,177 @@ namespace CSharpBuiltinDataTypes
                                   $"decimal .NET Type: {decimalDefaultValue . GetType ( )}\n" +
                                   $"decimal Byte: {decimalByte}, Bit: {decimalByte * 8}\n" +
                                   $"decimal Maximum Value: {decimalMaxValue}\n" +
-                                  $"decimal Minimum Value: {decimalMinValue}\n" );
+                                  $"decimal Minimum Value: {decimalMinValue}\n\n" );
 
 
 
-            /********** String Data Type **********/
-            Console . WriteLine ( "********** String Data Type **********" );
+            /*>>>>>>>>>> Reference Types <<<<<<<<<<*/
+            Console . WriteLine ( ">>>>>>>>>>Built-in Reference Types<<<<<<<<<<\n" );
 
-            // string .NET Type, Byte, Bit, Default, Minimum and Maximum Value
-            string stringDefaultValue = default;
-            int stringLength          = stringDefaultValue.Length;
-            // Default Value of string is null, It Throws a RunTime Error, Not
-            // Compilation Error; This Error is Called NullReferenceException
-            Console . WriteLine ( $"string Default Value: {stringDefaultValue}\n" +
-                                  $"string .NET Type: {stringDefaultValue . GetType ( )}\n" +
-                                  $"string Byte: Not Defined, Bit: Not Defined\n" +
-                                  $"string Maximum Value: Not Defined\n" +
-                                  $"string Minimum Value: Not Defined\n" +
-                                  $"Default string Length: {stringLength}" );
+            /********** String, Object and Dynamic Data Types **********/
+            Console . WriteLine ( "********** String, Object and Dynamic Data Types **********" );
+
+            // string, object and dynamic Defaults, .NET Types
+            string stringDefaultValue   = default;
+            object objectDefaultValue   = default;
+            dynamic dynamicDefaultValue = default;
+            // If we want to do any kind of operation with a null variable, such as
+            // stringDefaultValue.GetType(); it Throws a RunTime Error, not a Compilation
+            // Error; This Error is Called NullReferenceException
+            Console . WriteLine ( $"string Default Value : {stringDefaultValue}\n" +
+                                  $"object Default Value : {objectDefaultValue}\n" +
+                                  $"dynamic Default Value: {dynamicDefaultValue}\n\n" );
+
+            string stringGreeting   = "Welcome ";
+            stringGreeting += "to C#!";
+            object objectGreeting   = "Welcome to C#!";
+            dynamic dynamicGreeting = "Welcome to C#!";
+
+            // object needs typecasting while working with strings
+            if ( stringGreeting == ( string ) objectGreeting )
+            {
+                Console . WriteLine ( $"string : {stringGreeting} and {objectGreeting}" +
+                                      $" are Equal\n" );
+            }
+            else
+            {
+                Console . WriteLine ( $"string : {stringGreeting} and {objectGreeting}" +
+                                      $" are Not Equal\n" );
+            }
+
+            // dynamic does not need typecasting while working with strings
+            if ( stringGreeting == dynamicGreeting )
+            {
+                Console . WriteLine ( $"dynamic: {stringGreeting} and {dynamicGreeting}" +
+                                      $" are Equal\n\n" );
+            }
+            else
+            {
+                Console . WriteLine ( $"dynamic: {stringGreeting} and {dynamicGreeting}" +
+                                      $" are Not Equal\n\n" );
+            }
+
+            // object can store any kind of value
+            object objectBool    =    boolMaxValue;
+            object objectSByte   =   sByteMaxValue;
+            object objectByte    =    byteMaxValue;
+            object objectChar    =    charMaxValue;
+            object objectShort   =   shortMaxValue;
+            object objectUShort  =  uShortMaxValue;
+            object objectInt     =     intMaxValue;
+            object objectUInt    =    uIntMaxValue;
+            object objectLong    =    longMaxValue;
+            object objectULong   =   uLongMaxValue;
+            object objectFloat   =   floatMaxValue;
+            object objectDouble  =  doubleMaxValue;
+            object objectDecimal = decimalMaxValue;
+            object objectNull    =            null;
+            Console . WriteLine ( $">>>>>>>>>> Object <<<<<<<<<<\n\n" +
+
+                                  $"String Value           : {objectGreeting}\n" +
+                                  $"Object Type            : {objectGreeting . GetType ( )}\n\n" +
+
+                                  $"Boolean Value          : {objectBool}\n" +
+                                  $"Object Type            : {objectBool . GetType ( )}\n\n" +
+
+                                  $"Signed Byte Value      : {objectSByte}\n" +
+                                  $"Object Type            : {objectSByte . GetType ( )}\n\n" +
+
+                                  $"Unsigned Byte Value    : {objectByte}\n" +
+                                  $"Object Type            : {objectByte . GetType ( )}\n\n" +
+
+                                  $"Character Value        : {objectChar}\n" +
+                                  $"Object Type            : {objectChar . GetType ( )}\n\n" +
+
+                                  $"Signed Short Value     : {objectShort}\n" +
+                                  $"Object Type            : {objectShort . GetType ( )}\n\n" +
+
+                                  $"Unsigned Short Value   : {objectUShort}\n" +
+                                  $"Object Type            : {objectUShort . GetType ( )}\n\n" +
+
+                                  $"Signed Integer Value   : {objectInt}\n" +
+                                  $"Object Type            : {objectInt . GetType ( )}\n\n" +
+
+                                  $"Unsigned Integer Value : {objectUInt}\n" +
+                                  $"Object Type            : {objectUInt . GetType ( )}\n\n" +
+
+                                  $"Signed Long Value      : {objectLong}\n" +
+                                  $"Object Type            : {objectLong . GetType ( )}\n\n" +
+
+                                  $"Unsigned Long Value    : {objectULong}\n" +
+                                  $"Object Type            : {objectULong . GetType ( )}\n\n" +
+
+                                  $"Floating Value         : {objectFloat}\n" +
+                                  $"Object Type            : {objectFloat . GetType ( )}\n\n" +
+
+                                  $"Double Value           : {objectDouble}\n" +
+                                  $"Object Type            : {objectDouble . GetType ( )}\n\n" +
+
+                                  $"Decimal Value          : {objectDecimal}\n" +
+                                  $"Object Type            : {objectDecimal . GetType ( )}\n\n" +
+
+                                  $"Null Value             : {objectNull}\n\n" );
+
+            // dynamic can store any kind of value
+            dynamic dynamicBool    =    boolMinValue;
+            dynamic dynamicSByte   =   sByteMinValue;
+            dynamic dynamicByte    =    byteMinValue;
+            dynamic dynamicChar    =    charMinValue;
+            dynamic dynamicShort   =   shortMinValue;
+            dynamic dynamicUShort  =  uShortMinValue;
+            dynamic dynamicInt     =     intMinValue;
+            dynamic dynamicUInt    =    uIntMinValue;
+            dynamic dynamicLong    =    longMinValue;
+            dynamic dynamicULong   =   uLongMinValue;
+            dynamic dynamicFloat   =   floatMinValue;
+            dynamic dynamicDouble  =  doubleMinValue;
+            dynamic dynamicDecimal = decimalMinValue;
+            dynamic dynamicNull    =            null;
+            Console . WriteLine ( $">>>>>>>>>> Dynamic <<<<<<<<<<\n\n" +
+
+                                  $"String Value           : {dynamicGreeting}\n" +
+                                  $"Object Type            : {dynamicGreeting . GetType ( )}\n\n" +
+
+                                  $"Boolean Value          : {dynamicBool}\n" +
+                                  $"Object Type            : {dynamicBool . GetType ( )}\n\n" +
+
+                                  $"Signed Byte Value      : {dynamicSByte}\n" +
+                                  $"Object Type            : {dynamicSByte . GetType ( )}\n\n" +
+
+                                  $"Unsigned Byte Value    : {dynamicByte}\n" +
+                                  $"Object Type            : {dynamicByte . GetType ( )}\n\n" +
+
+                                  $"Character Value        : {dynamicChar}\n" +
+                                  $"Object Type            : {dynamicChar . GetType ( )}\n\n" +
+
+                                  $"Signed Short Value     : {dynamicShort}\n" +
+                                  $"Object Type            : {dynamicShort . GetType ( )}\n\n" +
+
+                                  $"Unsigned Short Value   : {dynamicUShort}\n" +
+                                  $"Object Type            : {dynamicUShort . GetType ( )}\n\n" +
+
+                                  $"Signed Integer Value   : {dynamicInt}\n" +
+                                  $"Object Type            : {dynamicInt . GetType ( )}\n\n" +
+
+                                  $"Unsigned Integer Value : {dynamicUInt}\n" +
+                                  $"Object Type            : {dynamicUInt . GetType ( )}\n\n" +
+
+                                  $"Signed Long Value      : {dynamicLong}\n" +
+                                  $"Object Type            : {dynamicLong . GetType ( )}\n\n" +
+
+                                  $"Unsigned Long Value    : {dynamicULong}\n" +
+                                  $"Object Type            : {dynamicULong . GetType ( )}\n\n" +
+
+                                  $"Floating Value         : {dynamicFloat}\n" +
+                                  $"Object Type            : {dynamicFloat . GetType ( )}\n\n" +
+
+                                  $"Double Value           : {dynamicDouble}\n" +
+                                  $"Object Type            : {dynamicDouble . GetType ( )}\n\n" +
+
+                                  $"Decimal Value          : {dynamicDecimal}\n" +
+                                  $"Object Type            : {dynamicDecimal . GetType ( )}\n\n" +
+
+                                  $"Null Value             : {dynamicNull}\n\n" );
         }
     }
 }
