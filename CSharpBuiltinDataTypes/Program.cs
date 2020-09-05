@@ -128,7 +128,6 @@ namespace CSharpBuiltinDataTypes
                                   $"ulong Minimum Value: {uLongMinValue}\n" );
 
 
-
             /********** Floating Data Types **********/
             Console . WriteLine ( "********** Floating Data Types **********" );
 
@@ -153,7 +152,6 @@ namespace CSharpBuiltinDataTypes
                                   $"double Byte: {doubleByte}, Bit: {doubleByte * 8}\n" +
                                   $"double Maximum Value: {doubleMaxValue}\n" +
                                   $"double Minimum Value: {doubleMinValue}\n" );
-
 
 
             /********** Decimal Data Type **********/
@@ -218,6 +216,7 @@ namespace CSharpBuiltinDataTypes
                                       $" are Not Equal\n\n" );
             }
 
+
             // object can store any kind of value
             object objectBool    =    boolMaxValue;
             object objectSByte   =   sByteMaxValue;
@@ -278,6 +277,7 @@ namespace CSharpBuiltinDataTypes
                                   $"Object Type            : {objectDecimal . GetType ( )}\n\n" +
 
                                   $"Null Value             : {objectNull}\n\n" );
+
 
             // dynamic can store any kind of value
             dynamic dynamicBool    =    boolMinValue;
